@@ -1,14 +1,17 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
+  <ChatLog/>
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>
+import ChatLog from './components/ChatLog.vue';
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
+    ChatLog,
     HelloWorld
   }
 }
