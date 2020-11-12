@@ -1,6 +1,4 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-
   <div class="main-panel">
 
     <ChatLog/>
@@ -8,15 +6,17 @@
     <div class="game-panel">
 
       <div class="inner-panel">
-        <div>Simulation View</div>
+        <SimulationView/>
         <ActionPanel/>
       </div>
 
-      <div>Gold View</div>
+      <GoldView/>
 
     </div>
 
   </div>
+
+  <img alt="Vue logo" src="./assets/logo.png">
 
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
@@ -24,14 +24,18 @@
 <script>
 import ActionPanel from './components/ActionPanel.vue';
 import ChatLog from './components/ChatLog.vue';
-import HelloWorld from './components/HelloWorld.vue'
+import GoldView from './components/GoldView.vue';
+import HelloWorld from './components/HelloWorld.vue';
+import SimulationView from './components/SimulationView.vue';
 
 export default {
   name: 'App',
   components: {
     ActionPanel,
     ChatLog,
-    HelloWorld
+    GoldView,
+    HelloWorld,
+    SimulationView
   }
 }
 </script>
@@ -46,18 +50,21 @@ export default {
   margin-top: 60px;
 }
 
-.main-panel{
+.main-panel {
   display: flex;
   flex-direction: row;
 }
 
-.game-panel{
+.game-panel {
   display: flex;
   flex-direction: column;
 }
 
-.inner-panel{
+.inner-panel {
   display: flex;
   flex-direction: row;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 100%;
 }
 </style>
